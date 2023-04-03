@@ -7,8 +7,8 @@ import org.springframework.lang.Nullable;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
-//import javax.validatio
-//getter,setterの自動作成
+//Viewに渡すためのオブジェクトを定義
+//@Data:getter,setterの自動作成
 @Data
 public class CommentForm {
     @Nullable

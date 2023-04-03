@@ -1,6 +1,7 @@
 package checkboard.me.checkboard.presentation;
 
 import checkboard.me.checkboard.application.form.CommentForm;
+import checkboard.me.checkboard.application.usecase.UserCommentUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -14,9 +15,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequiredArgsConstructor
 public class BoardController {
+    private final UserCommentUseCase userCommentUseCase;
     @GetMapping("/board")
     public ModelAndView viewBoard(ModelAndView modelAndView){
-//      ModelAndViewをreturnする方法で画面描画：入力画面'board'へのパス、引き渡すオブジェクトを設定(オブジェクトで入力値の型チェック？)
+//      ModelAndViewをreturnする方法で画面描画：入力画面'board'へのパス、引き渡すオブジェクトを設定(オブジェクトで入力値の型チェック)
         modelAndView.setViewName("board");
         modelAndView.addObject("commentForm", new CommentForm());
         return modelAndView;
@@ -30,6 +32,9 @@ public class BoardController {
             modelAndview.addObject("commentForm", comment);
             return modelAndview;
         }
+
+        userCommentUseCase.write(comment);
+
         return new ModelAndView("redirect:/board");
     }
 }
