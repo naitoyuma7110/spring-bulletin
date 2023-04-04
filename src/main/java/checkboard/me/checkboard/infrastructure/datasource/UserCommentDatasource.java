@@ -16,15 +16,12 @@ import org.springframework.stereotype.Repository;
     モデルオブジェクトを受け取りDB登録を実行する機能の実装
 */
 
-
+@RequiredArgsConstructor
 @Repository
 public class UserCommentDatasource implements UserCommentRepository {
-
+    @Autowired
     private final UserCommentMapper mapper;
 
-    public UserCommentDatasource(UserCommentMapper mapper) {
-        this.mapper = mapper;
-    }
 
     @Override
     public void save(UserComment userComment) {
