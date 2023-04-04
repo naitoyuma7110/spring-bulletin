@@ -10,4 +10,6 @@ package checkboard.me.checkboard.domain.model;
 public interface UserCommentRepository {
 //  userComment: domain-modelを受け取り保存処理を実行する
     void save(UserComment userComment);
+
+    void testSave();
 }

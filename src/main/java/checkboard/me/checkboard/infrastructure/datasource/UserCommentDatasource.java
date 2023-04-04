@@ -21,10 +21,14 @@ import org.springframework.stereotype.Repository;
 public class UserCommentDatasource implements UserCommentRepository {
     private final UserCommentMapper mapper;
 
-
     @Override
     public void save(UserComment userComment) {
         mapper.insert(UserCommentDto.from(userComment));
+    }
+
+    @Override
+    public  void testSave(){
+        mapper.testInsert();
     }
 
 }

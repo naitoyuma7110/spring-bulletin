@@ -4,6 +4,7 @@ import checkboard.me.checkboard.application.form.CommentForm;
 import checkboard.me.checkboard.application.usecase.UserCommentUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,4 +38,16 @@ public class BoardController {
 
         return new ModelAndView("redirect:/board");
     }
+
+    @GetMapping("/test") // localhost:8080/helloはここにアクセスが来る
+    public String hello(Model model){
+        return "test";
+    }
+    @PostMapping("/testpost")
+    public String testComment() {
+        userCommentUseCase.testWrite();
+        return "redirect:/test";
+    }
+
+
 }

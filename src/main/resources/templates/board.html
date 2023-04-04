@@ -14,7 +14,7 @@
         投稿の内容を表示する場所
     </div>
     <hr>
-<!-- commentFormオブジェクトの各プロパティがタグのname属性にマッピングされる   -->
+    <!-- commentFormオブジェクトの各プロパティがタグのname属性にマッピングされる   -->
     <form method="POST" action="/board" th:object="${commentForm}">
         <input placeholder="名前" th:field="*{name}">
         <span class="error-message" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span>

@@ -17,4 +17,7 @@ import org.apache.ibatis.annotations.Param;
 public interface UserCommentMapper {
     @Insert("sql/insertUserComment.sql")
     void insert(@Param("dto") UserCommentDto dto);
+
+    @Insert("sql/test.sql")
+    void testInsert();
 }

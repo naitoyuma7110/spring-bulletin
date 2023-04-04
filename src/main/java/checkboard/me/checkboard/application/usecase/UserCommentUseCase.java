@@ -29,4 +29,8 @@ public class UserCommentUseCase {
         repository.save(userComment);
     }
 
+    public void testWrite(){
+        repository.testSave();
+    }
+
 }
