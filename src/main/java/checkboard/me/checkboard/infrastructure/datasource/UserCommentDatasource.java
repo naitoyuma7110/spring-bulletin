@@ -19,7 +19,6 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 @Repository
 public class UserCommentDatasource implements UserCommentRepository {
-    @Autowired
     private final UserCommentMapper mapper;
 
 
