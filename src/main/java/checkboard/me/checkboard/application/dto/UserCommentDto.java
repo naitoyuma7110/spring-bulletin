@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 /*
-    DTO：Data Tranfer Object
+    DTO：Data Transfer Object
     ドメイン層はシステムの主幹となる機能を担当している重要かつ複雑な部分のため、アプリケーション層やプレゼンテーション層といった
     周辺機能に依存する構造は避けるべき
     DTOはDBなどを使用した永続化処理の際、ドメイン層とアプリケーション層間のデータ型の差を吸収する

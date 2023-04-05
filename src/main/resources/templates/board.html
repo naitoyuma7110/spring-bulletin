@@ -11,7 +11,8 @@
 <body>
 <div layout:fragment="layoutContent">
     <div id="board-area">
-        投稿の内容を表示する場所
+        <div th:replace="~{fragments/thread(comments=${comments})}">
+        </div>
     </div>
     <hr>
     <!-- commentFormオブジェクトの各プロパティがタグのname属性にマッピングされる   -->
