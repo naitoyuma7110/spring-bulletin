@@ -10,6 +10,12 @@ import lombok.RequiredArgsConstructor;
 import java.util.Random;
 
 
+/*
+    domain:システムの基幹となる処理
+    ここではtypeを組み合わせて実現したい機能を定義している
+*/
+
+
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 public class UserComment {
@@ -24,11 +30,6 @@ public class UserComment {
                 Comment.from(comment)
         );
     }
-    /**
-     * 名前が[!omikuji]ならばおみくじの結果を返す.
-     * そうでないならばNameをそのまま返す.
-     * @return なまえ
-     */
     public Name getName() {
         if(!name.equals("!omikuji")) return name;
 
