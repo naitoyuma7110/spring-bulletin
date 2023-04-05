@@ -3,7 +3,6 @@ package checkboard.me.checkboard.application.usecase;
 import checkboard.me.checkboard.application.form.CommentForm;
 import checkboard.me.checkboard.domain.model.UserComment;
 import checkboard.me.checkboard.domain.model.UserCommentRepository;
-import checkboard.me.checkboard.domain.type.UserComments;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -32,10 +31,6 @@ public class UserCommentUseCase {
 
     public void testWrite(){
         repository.testSave();
-    }
-
-    public UserComments read(){
-        return repository.select();
     }
 
 }

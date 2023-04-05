@@ -2,7 +2,6 @@ package checkboard.me.checkboard.presentation;
 
 import checkboard.me.checkboard.application.form.CommentForm;
 import checkboard.me.checkboard.application.usecase.UserCommentUseCase;
-import checkboard.me.checkboard.domain.type.UserComments;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,9 +19,6 @@ public class BoardController {
     private final UserCommentUseCase userCommentUseCase;
     @GetMapping("/board")
     public ModelAndView viewBoard(ModelAndView modelAndView){
-        UserComments userComments = userCommentUseCase.read();
-//      getValuesは@RequiredArgsConstructorで自動生成
-        modelAndView.addObject("comments", userComments.getValues());
 //      ModelAndViewをreturnする方法で画面描画：入力画面'board'へのパス、引き渡すオブジェクトを設定(オブジェクトで入力値の型チェック)
         modelAndView.setViewName("board");
         modelAndView.addObject("commentForm", new CommentForm());
@@ -44,17 +40,14 @@ public class BoardController {
     }
 
     @GetMapping("/test") // localhost:8080/helloはここにアクセスが来る
-    public String test(Model model){
+    public String hello(Model model){
         return "test";
     }
-
-    @PostMapping("/test")
+    @PostMapping("/testpost")
     public String testComment() {
         userCommentUseCase.testWrite();
         return "redirect:/test";
     }
-
-
 
 
 }
