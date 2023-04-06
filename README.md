@@ -5,5 +5,5 @@ https://zenn.dev/angelica/books/52be1e365c61ea/viewer/16ce8d
 
 ## 使用技術
 - Springboot(Java)
-- Mybitas
-- H2(Database)
+- Mybatis
+- H2(簡易DB)
