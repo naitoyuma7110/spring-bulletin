@@ -2,6 +2,7 @@ package checkboard.me.checkboard.demo;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -17,10 +18,11 @@ public class BatchProcessing {
     @Autowired
     Count count;
 
-    @Scheduled(initialDelay = 3000, fixedDelay = 5000)
-    public void increment(){
-        int currentCount = count.getCount();
-        logger.info("Current count is: " + currentCount);
+    public BatchProcessing(){
+
+        logger.info(String.valueOf(count.getCount()));
+//        logger.info("HELLO");
+
     }
 
 }

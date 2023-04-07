@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class CreateBean {
 
 //  @Beanが付与されたメソッドでCountインスタンスをreturnする事でDI登録される
-    @Bean
+    @Bean(name="Count")
     public Count count(){
         return new Count();
     }

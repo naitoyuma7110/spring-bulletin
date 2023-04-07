@@ -1,16 +1,18 @@
 package checkboard.me.checkboard.demo;
 
+
+
 public class Count {
 
     private int count;
 
-    public Count() {
-        this.count = 0;
+    public Count(){
+        this.count = 1;
     }
 
     public int getCount(){
-        count++;
-        return count;
+        this.count++;
+        return this.count;
     }
 
 }
