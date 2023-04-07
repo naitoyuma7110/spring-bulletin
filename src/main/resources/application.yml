@@ -15,6 +15,7 @@ spring:
     init:
       schema-locations:
         - classpath:h2/schema.sql # DB初期化用SQL
+        - classpath:org/springframework/security/core/userdetails/jdbc/users.ddl # Spring-Securityによる認証用table(Users, Authorities)のセットアップschema(備え付け)
       data-locations: # 初期サンプルデータ用SQL
         - classpath:h2/data.sql
       mode: embedded # 上記SQL実行を常に行う.EMBEDDED=h2dbのとき、の意味. ALWAYSは無条件
