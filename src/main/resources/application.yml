@@ -19,3 +19,8 @@ spring:
       data-locations: # 初期サンプルデータ用SQL
         - classpath:h2/data.sql
       mode: embedded # 上記SQL実行を常に行う.EMBEDDED=h2dbのとき、の意味. ALWAYSは無条件
+  logging:
+    level:
+      org:
+        springframework:
+          security: DEBUG

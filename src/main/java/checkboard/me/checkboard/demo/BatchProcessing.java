@@ -18,11 +18,9 @@ public class BatchProcessing {
     @Autowired
     Count count;
 
-    public BatchProcessing(){
-
-        logger.info(String.valueOf(count.getCount()));
-//        logger.info("HELLO");
-
+    public void countTest(){
+        logger.info(Integer.toString(count.getCount()));
     }
+
 
 }
