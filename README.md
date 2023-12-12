@@ -2,7 +2,7 @@
 
 参考https://zenn.dev/angelica/books/52be1e365c61ea/viewer/16ce8d
 
-## 使用技術
+## 概要
 - Springboot(Java)
 - Mybatis
 - H2(簡易DB)
